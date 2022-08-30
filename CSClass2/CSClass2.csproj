@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dummy.cs" />
+    <Compile Include="IBasic.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Products.cs" />
     <Compile Include="Wanted.cs" />
