@@ -11,6 +11,7 @@ namespace CSClass2
 
         static void Main(string[] args)
         {
+            /*
             Wanted<string> wantedString = new Wanted<string>("String");
             Wanted<int> wantedInt = new Wanted<int>(52273);
             Wanted<double> wantedDouble = new Wanted<double>(52.273);
@@ -56,8 +57,31 @@ namespace CSClass2
             Console.WriteLine(pointStructA.x + "/" + pointStructA.y);
             Console.WriteLine(pointStructB.x + "/" + pointStructB.y);
 
+            */
 
 
+           
+
+            
+            using (Dummy dummy = new Dummy())
+            {
+     
+                List<Product> list = new List<Product>()
+                {
+                new Product(){ Name="고구마", Price=1500},
+                new Product(){ Name="사과", Price=2400},
+                new Product(){ Name="바나나", Price=1000},
+                new Product(){ Name="배", Price=3000},
+
+                };
+
+                list.Sort();
+
+                foreach (var item in list)
+                {
+                    Console.WriteLine(item);
+                }
+            }
         }
 
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
