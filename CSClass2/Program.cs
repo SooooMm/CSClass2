@@ -82,8 +82,27 @@ namespace CSClass2
                     Console.WriteLine(item);
                 }
             }
-        }
 
+            IBasic basic = new TestClass();
+            //basic.someThing();  //호출 불가능
+            (basic as TestClass).someThing();
+        }
+        class TestClass : IBasic
+        {
+            public void someThing() 
+            { 
+                
+            }
+            public int TestProperty { 
+                get => throw new NotImplementedException(); 
+                set => throw new NotImplementedException(); 
+            }
+
+            public int TestInstanceMethod()
+            {
+                throw new NotImplementedException();
+            }
+        }
         static void NextPos(int x, int y, int vx, int vy, out int rx, out int ry)
         {
             rx = x + vx;
