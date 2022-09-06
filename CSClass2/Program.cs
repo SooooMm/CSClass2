@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,7 +61,7 @@ namespace CSClass2
             */
 
 
-           
+
 
             /*
             using (Dummy dummy = new Dummy())
@@ -89,12 +90,15 @@ namespace CSClass2
 
             */
 
-
+            /*
             Child child = new Child();
             Parent childAsParent = new Child();
             IDisposable childAsDisposable = new Child();
             IComparable childAsComparable = new Child();
+            */
 
+            File.WriteAllText(@"C:\\Temp\test.txt", "문자열 메시지");
+            Console.WriteLine(File.ReadAllText(@"C:\\Temp\test.txt"));
 
         }
         class TestClass : IBasic
