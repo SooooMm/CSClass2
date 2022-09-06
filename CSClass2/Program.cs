@@ -62,7 +62,7 @@ namespace CSClass2
 
            
 
-            
+            /*
             using (Dummy dummy = new Dummy())
             {
      
@@ -86,6 +86,16 @@ namespace CSClass2
             IBasic basic = new TestClass();
             //basic.someThing();  //호출 불가능
             (basic as TestClass).someThing();
+
+            */
+
+
+            Child child = new Child();
+            Parent childAsParent = new Child();
+            IDisposable childAsDisposable = new Child();
+            IComparable childAsComparable = new Child();
+
+
         }
         class TestClass : IBasic
         {
@@ -150,4 +160,6 @@ namespace CSClass2
             }
         }
     }
+
+
 }
