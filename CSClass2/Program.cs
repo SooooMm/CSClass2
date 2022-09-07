@@ -130,17 +130,40 @@ namespace CSClass2
 
             //예외
             string[] array = { "가", "나" };
-            Console.Write("숫자 입력 : ");
-            int input = int.Parse(Console.ReadLine());
+            Boolean isInputLoop = true;
 
-            if (input < array.Length)
+            while (isInputLoop)
             {
-                Console.WriteLine("위치 값 : " + array[input]);
+                Console.Write("숫자 입력(0 ~ "+(array.Length-1)+") : ");
+                string input = Console.ReadLine();
+
+                try
+                {
+                    int index = int.Parse(Console.ReadLine());
+                    Console.WriteLine("위치 값 : " + array[index]);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("숫자가 아닌것을 입력해 FormatException이 발생했습니다.");
+                    Console.WriteLine(e.GetType());
+                }
+                catch (IndexOutOfRangeException e)
+                {
+                    Console.WriteLine("0 이상 "+array.Length+" 미만 값을 입력하세요");
+                    Console.WriteLine(e.GetType());
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("예외가 발생했습니다.");
+                    Console.WriteLine(e.GetType());
+                }
+                finally
+                {
+                    Console.WriteLine("프로그램 종료");
+                }
 
             }
-            else {
-                Console.WriteLine("인덱스 범위를 넘었습니다.");
-            }
+           
 
 
         }
