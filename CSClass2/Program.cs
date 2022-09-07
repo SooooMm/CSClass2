@@ -102,6 +102,7 @@ namespace CSClass2
             Console.WriteLine(File.ReadAllText(@"C:\\Temp\test.txt"));
             */
 
+            /*
             using (StreamWriter writer = new StreamWriter(@"C:\\Temp\test.txt"))
             {
                 writer.WriteLine("안녕하세요");
@@ -124,6 +125,24 @@ namespace CSClass2
                 }
                
             }
+
+            */
+
+            //예외
+            string[] array = { "가", "나" };
+            Console.Write("숫자 입력 : ");
+            int input = int.Parse(Console.ReadLine());
+
+            if (input < array.Length)
+            {
+                Console.WriteLine("위치 값 : " + array[input]);
+
+            }
+            else {
+                Console.WriteLine("인덱스 범위를 넘었습니다.");
+            }
+
+
         }
         class TestClass : IBasic
         {
