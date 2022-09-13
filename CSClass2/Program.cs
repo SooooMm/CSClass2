@@ -128,9 +128,20 @@ namespace CSClass2
 
             */
 
-            /*
+            
             //예외
             string[] array = { "가", "나" };
+
+            //throw new FormatException();
+            try {
+                throw new HungryException("배고파요~");
+            } catch (Exception e) {
+                Console.WriteLine(e.GetType());
+                Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+            }
+
+            
             Boolean isInputLoop = true;
 
             while (isInputLoop)
@@ -142,7 +153,7 @@ namespace CSClass2
                 {
                     int index = int.Parse(Console.ReadLine());
                     Console.WriteLine("위치 값 : " + array[index]);
-                }/*
+                }
                 catch (FormatException e)
                 {
                     Console.WriteLine("숫자가 아닌것을 입력해 FormatException이 발생했습니다.");
@@ -166,7 +177,7 @@ namespace CSClass2
                 }
 
             }
-           */
+           
 
 
 
@@ -179,6 +190,7 @@ namespace CSClass2
                 int index = int.Parse(input);
                 Console.WriteLine(array[index]);
             }
+            //var는 예외 매개변수 부분에서 사용할 수 없다.
             catch (FormatException e){
                 Console.WriteLine("format exception");
                 Console.WriteLine(e.GetType());
