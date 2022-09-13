@@ -128,6 +128,7 @@ namespace CSClass2
 
             */
 
+            
             //예외
             string[] array = { "가", "나" };
             Boolean isInputLoop = true;
@@ -141,7 +142,7 @@ namespace CSClass2
                 {
                     int index = int.Parse(Console.ReadLine());
                     Console.WriteLine("위치 값 : " + array[index]);
-                }
+                }/*
                 catch (FormatException e)
                 {
                     Console.WriteLine("숫자가 아닌것을 입력해 FormatException이 발생했습니다.");
@@ -151,11 +152,13 @@ namespace CSClass2
                 {
                     Console.WriteLine("0 이상 "+array.Length+" 미만 값을 입력하세요");
                     Console.WriteLine(e.GetType());
-                }
+                }*/
                 catch (Exception e)
                 {
                     Console.WriteLine("예외가 발생했습니다.");
                     Console.WriteLine(e.GetType());
+                    Console.WriteLine(e.Message);
+                    Console.WriteLine(e.StackTrace);
                 }
                 finally
                 {
@@ -164,7 +167,7 @@ namespace CSClass2
 
             }
            
-
+            
 
         }
         class TestClass : IBasic
