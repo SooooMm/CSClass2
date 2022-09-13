@@ -141,7 +141,7 @@ namespace CSClass2
                 Console.WriteLine(e.StackTrace);
             }
 
-            
+            /*
             Boolean isInputLoop = true;
 
             while (isInputLoop)
@@ -201,7 +201,7 @@ namespace CSClass2
                 Console.WriteLine(e.GetType());
             }
 
-
+            */
         }
         class TestClass : IBasic
         {
